@@ -75,6 +75,7 @@ idna==3.10
     #   requests
 ipykernel==6.30.1
     # via
+    #   -r requirements.in
     #   jupyter
     #   jupyter-console
     #   jupyterlab
