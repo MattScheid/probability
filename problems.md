@@ -35,9 +35,11 @@ In the first case with exactly two 6's:
 $$2 * \left( \frac{1}{6} \right) ^2 + \left(\frac{5}{6} \right) = \frac{10}{216}$$
 
 In the special case with all three 6's:
+
 $$\left( \frac{1}{6} \right) ^3 = \frac{1}{216}$$
 
 Altogether:
+
 $$P(\text{Two 6's in a row}) = \frac{11}{216}$$
 
 ## Problem 2: Seven Game Series
@@ -50,7 +52,7 @@ Two teams play a series of games (best of 7) in which each team has a 50% chance
 
 ### Answer:
 
-Favorable Outcomes:
+**Favorable Outcomes:**
 - Each team needs to win 3 games of 6
 - We can think of this as a binomial series
     - Outcome 1 = team A, 0 = team B
@@ -60,12 +62,13 @@ Favorable Outcomes:
 
 $$\text{favorable} = \binom{6}{3} = 20$$
 
-Total Outcomes
+**Total Outcomes**
 - two possible outcomes
 - order does matter because distinct sequence of outcomes
 
 $$\text{total} = 6^3$$
 
+**Probability**
 $$P(\text{7 game series}) = \frac{\binom{6}{3}}{2^6} = \frac{20}{64}$$
 
 ## Problem 3: Increasing Dice Rolls
@@ -93,7 +96,8 @@ Total cases:
 
 $$\text{total} = 216$$
 
-Probability:
+**Probability:**
+
 $$P(\text{increasing dice rolls}) = \frac{20}{216}$$
 
 ### Answer (General):
@@ -110,7 +114,8 @@ Since the numbers are unique, there is only one way to order them in ascending o
 
 $$P(\text{ascending}) = \frac{1}{6}$$
 
-Probability:
+**Probability:**
+
 $$P(\text{increasing dice rolls}) = \frac{5}{9} * \frac{1}{6} = \frac{5}{54} = \frac{20}{216}$$
 
 ## Problem 4: Lazy Reviewers
@@ -121,6 +126,7 @@ Suppose 80% of Netflix users rate movies thumbs up 60% of the time, and thumbs d
 Given that someone gives 3 movies IN A ROW a thumbs up, what's the probability they are a "lazy" rater?
 
 ### Answer:
+
 **Bayes Theorem:**
 
 $$P(\text{lazy } | \text{ 3 good}) = \frac{P(\text{3 good } | \text{ lazy}) * P(\text{lazy})}{P(\text{3 good})}$$
@@ -148,9 +154,13 @@ $$P(\text{lazy } | \text{ 3 good}) = \frac{1.0 * 0.2}{0.3728} \approx{0.536}$$
 ## Problem 5: Intersecting Chords
 
 ### Question:
-You draw a circle and choose two chords at random. What is the probability that those chords will intersect?
+
+You draw a circle and choose two chords at random. 
+
+*What is the probability that those chords will intersect?*
 
 ### Answer (Specific):
+
 Assume there are 4 points: $A_1, B_1, A_2, B_2$.
 
 The $A_1$ and $A_2$ points are connected as a chord, and the $B_1$ and $B_2$ points are connected as a chord.
@@ -158,6 +168,7 @@ The $A_1$ and $A_2$ points are connected as a chord, and the $B_1$ and $B_2$ poi
 The chords will intersect only if the points alternate as one goes along the circle clockwise. For example: $(A_1, B_2, A_2, B_1)$
 
 **Total combinations of points:**
+
 $$\text{total combinations} = 4! = 4 * 3 * 2 * 1 = 24$$
 
 **Alternating combinations:**
@@ -173,6 +184,7 @@ $$\text{total combinations} = 4! = 4 * 3 * 2 * 1 = 24$$
 $$\text{favorable combinations} = 8$$
 
 **Solution:**
+
 $$P(\text{intersect}) = \frac{8}{24} = \frac{1}{3}$$
 
 ### Answer (General):
@@ -184,9 +196,11 @@ We have 4 points on the circle. Label the 4 points clockwise as $P_1, P_2, P_3, 
 To form two chords, we need to pair these 4 points into 2 pairs.  
 
 The number of distinct pairings is:  
+
 $$
 \frac{1}{2} \binom{4}{2} = \frac{1}{2} \cdot 6 = 3
 $$
+
 - First chord: choose any 2 of the 4 points
 - Second chord is then determined by the remaining 2 points
 - The $\frac{1}{2}$ is because the order of the pairs doesn't matter
