@@ -66,9 +66,10 @@ $$\text{favorable} = \binom{6}{3} = 20$$
 - two possible outcomes
 - order does matter because distinct sequence of outcomes
 
-$$\text{total} = 6^3$$
+$$\text{total} = 2^6$$
 
 **Probability**
+
 $$P(\text{7 game series}) = \frac{\binom{6}{3}}{2^6} = \frac{20}{64}$$
 
 ## Problem 3: Increasing Dice Rolls
