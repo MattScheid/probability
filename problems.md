@@ -213,6 +213,5 @@ $$
 So out of 3 possible pairings, exactly 1 leads to intersection.
 
 **Step 3: Probability**
-$$
-P(\text{intersect}) = \frac{1}{3}
-$$
+
+$$P(\text{intersect}) = \frac{1}{3}$$
