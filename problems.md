@@ -123,7 +123,7 @@ $$P(\text{increasing dice rolls}) = \frac{5}{9} * \frac{1}{6} = \frac{5}{54} = \
 ### Question:
 Suppose 80% of Netflix users rate movies thumbs up 60% of the time, and thumbs down 40% of the time. However, 20% of Netflix users are "lazy": they rate 100% of the movies they watch as good!
 
-Given that someone gives 3 movies IN A ROW a thumbs up, what's the probability they are a "lazy" rater?
+*Given that someone gives 3 movies IN A ROW a thumbs up, what's the probability they are a "lazy" rater?*
 
 ### Answer:
 
@@ -142,10 +142,9 @@ $$P(\text{lazy } | \text{ 3 good}) = \frac{P(\text{3 good } | \text{ lazy}) * P(
 - $P(\text{3 good } | \text{ normal}) = 0.6^3 = 0.216$
 
 **Probability of Evidence**
+- $P(\text{3 good}) = P(\text{3 good } | \text{ lazy}) * P(\text{lazy}) + P(\text{3 good } | \text{ normal}) * P(\text{normal})$
 
-$P(\text{3 good}) = P(\text{3 good } | \text{ lazy}) * P(\text{lazy}) + P(\text{3 good } | \text{ normal}) * P(\text{normal})$
-
-$P(\text{3 good}) = (1.0 * 0.2) + (0.216 * 0.8) \approx{0.3728}$
+$$P(\text{3 good}) = (1.0 * 0.2) + (0.216 * 0.8) \approx{0.3728}$$
 
 **Solution:**
 
