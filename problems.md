@@ -1,4 +1,21 @@
-## Problem 1: Two Consecutive Sixes
+## Problem 1: High Value on 4th Roll
+
+### Question:
+
+A fair die is rolled repeatedly until a number larger than 4 is observed.
+
+*What's the probability that it takes you 4 rolls to roll a number greater than 4?*
+
+### Answer:
+
+What is the probability of 3 rolls less than or equal to 4, followed by 1 roll greater than 4?
+- $P(\text{<=4}) = 2/3$
+- $P(\text{>4}) = 1/3$
+
+Probability:
+$$P(\text{3 low, 1 high}) = \left( \frac{2}{3} \right)^3 * \frac{1}{3} = \frac{8}{81}$$
+
+## Problem 2: Two Consecutive Sixes
 
 ### Question:
 Say you roll a die three times. 
@@ -42,7 +59,7 @@ Altogether:
 
 $$P(\text{Two 6's in a row}) = \frac{11}{216}$$
 
-## Problem 2: Seven Game Series
+## Problem 3: Seven Game Series
 
 ### Question:
 
@@ -72,7 +89,7 @@ $$\text{total} = 2^6$$
 
 $$P(\text{7 game series}) = \frac{\binom{6}{3}}{2^6} = \frac{20}{64}$$
 
-## Problem 3: Increasing Dice Rolls
+## Problem 4: Increasing Dice Rolls
 
 ### Question:
 You roll three dice, one after another. 
@@ -119,7 +136,7 @@ $$P(\text{ascending}) = \frac{1}{6}$$
 
 $$P(\text{increasing dice rolls}) = \frac{5}{9} * \frac{1}{6} = \frac{5}{54} = \frac{20}{216}$$
 
-## Problem 4: Lazy Reviewers
+## Problem 5: Lazy Reviewers
 
 ### Question:
 Suppose 80% of Netflix users rate movies thumbs up 60% of the time, and thumbs down 40% of the time. However, 20% of Netflix users are "lazy": they rate 100% of the movies they watch as good!
@@ -151,7 +168,7 @@ $$P(\text{3 good}) = (1.0 * 0.2) + (0.216 * 0.8) \approx{0.3728}$$
 
 $$P(\text{lazy } | \text{ 3 good}) = \frac{1.0 * 0.2}{0.3728} \approx{0.536}$$
 
-## Problem 5: Intersecting Chords
+## Problem 6: Intersecting Chords
 
 ### Question:
 
