@@ -265,12 +265,12 @@ The expected number of rolls is 42
 - $6 \text{ trials} * 7 \text{ rolls per trial} = 42 \text{ rolls}$
 
 ### Answer (General)
-## Expected Rolls Until Two Consecutive 5s
+
+We model this as a Markov chain.
 
 We want the expected number of rolls of a fair die until the sequence **(5,5)** appears.
 
 #### Step 1. Define states
-We model this as a Markov chain.
 
 States:
 - **$S_0$**: No progress (last roll not a 5).  
@@ -279,7 +279,7 @@ States:
 
 Let $E_0$ and $E_1$ be the expected rolls to reach $S_2$ starting from $S_0$ and $S_1$, respectively. We want $E_0$.
 
-##### Step 2. Define Expected Values
+#### Step 2. Define Expected Values
 
 **From $S_0$:**
 $$
