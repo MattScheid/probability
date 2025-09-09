@@ -282,6 +282,7 @@ Let $E_0$ and $E_1$ be the expected rolls to reach $S_2$ starting from $S_0$ and
 #### Step 2. Define Expected Values
 
 **From $S_0$:**
+
 $$
 E_0 = 1 + \tfrac{1}{6}E_1 + \tfrac{5}{6}E_0
 $$
@@ -290,11 +291,13 @@ $$
 - By entering $S_0$ or $S_1$, you will accumulate the additional expected value of $E_0$ or $E_1$
 
 Rearrange:
+
 $$
 E_0 = 6 + E_1
 $$
 
 **From $S_1$:**
+
 $$
 E_1 = 1 + \tfrac{1}{6}(0) + \tfrac{5}{6}E_0
 $$
@@ -302,6 +305,7 @@ $$
 One roll is spent resulting in a $5/6$ chance of entering $S_0$ and a $1/6$ chance of entering $S_2$ (success).
 
 So:
+
 $$
 E_1 = 1 + \tfrac{5}{6}E_0
 $$
@@ -309,8 +313,9 @@ $$
 #### Step 3. Solve system
 
 Substitute into $E_0 = 6 + E_1$:
+
 $$
-E_0 = 6 + \Big(1 + \tfrac{5}{6}E_0\Big)
+E_0 = 6 + \left(1 + \tfrac{5}{6}E_0\right)
 $$
 
 $$
