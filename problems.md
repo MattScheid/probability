@@ -233,3 +233,98 @@ So out of 3 possible pairings, exactly 1 leads to intersection.
 **Step 3: Probability**
 
 $$P(\text{intersect}) = \frac{1}{3}$$
+
+## Problem 7: Consecutive 5's
+
+### Question:
+
+Say you’re rolling a fair six-sided die. 
+
+*What is the expected number of rolls until you get two consecutive 5s?*
+
+### Answer (Specific):
+- Warning this solution only works for length 2 patterns (e.g. 5,5 4,5 etc.).
+- For length 3+, a Markov Chain approach is necessary
+
+The probability of rolling a five is $1/6$
+- $P(5) = \frac{1}{6}$
+
+The expected number of rolls to roll a 5 is 6
+- Geometric distribution
+- $E[5] = \frac{1}{p} = \frac{1}{\frac{1}{6}} = 6$
+
+The expected number of rolls to complete a trial is 7
+- A trial is a set of rolls until a 5 is rolled, followed by the attempt at a second 5 
+- $E[\text{rolls in trial}] = E[5] + 1 = 6 + 1 = 7$
+ 
+The probability of a trial succeeding is also $1/6$
+- Geometric Distribution
+- $E[\text{num trials}] = \frac{1}{p} = \frac{1}{\frac{1}{6}} = 6$
+
+The expected number of rolls is 42
+- $6 \text{ trials} * 7 \text{ rolls per trial} = 42 \text{ rolls}$
+
+### Answer (General)
+## Expected Rolls Until Two Consecutive 5s
+
+We want the expected number of rolls of a fair die until the sequence **(5,5)** appears.
+
+#### Step 1. Define states
+We model this as a Markov chain.
+
+States:
+- **$S_0$**: No progress (last roll not a 5).  
+- **$S_1$**: One 5 has been rolled (waiting for another 5).  
+- **$S_2$**: Success (two consecutive 5s).  
+
+Let $E_0$ and $E_1$ be the expected rolls to reach $S_2$ starting from $S_0$ and $S_1$, respectively. We want $E_0$.
+
+##### Step 2. Define Expected Values
+
+**From $S_0$:**
+$$
+E_0 = 1 + \tfrac{1}{6}E_1 + \tfrac{5}{6}E_0
+$$
+
+- One roll is spent resulting in a $5/6$ chance of re-entering $S_0$, or a $1/6$ chance of entering $S_1$
+- By entering $S_0$ or $S_1$, you will accumulate the additional expected value of $E_0$ or $E_1$
+
+Rearrange:
+$$
+E_0 = 6 + E_1
+$$
+
+**From $S_1$:**
+$$
+E_1 = 1 + \tfrac{1}{6}(0) + \tfrac{5}{6}E_0
+$$
+
+One roll is spent resulting in a $5/6$ chance of entering $S_0$ and a $1/6$ chance of entering $S_2$ (success).
+
+So:
+$$
+E_1 = 1 + \tfrac{5}{6}E_0
+$$
+
+#### Step 3. Solve system
+
+Substitute into $E_0 = 6 + E_1$:
+$$
+E_0 = 6 + \Big(1 + \tfrac{5}{6}E_0\Big)
+$$
+
+$$
+E_0 = 7 + \tfrac{5}{6}E_0
+$$
+
+$$
+E_0 - \tfrac{5}{6}E_0 = 7
+$$
+
+$$
+\tfrac{1}{6}E_0 = 7
+$$
+
+$$
+E_0 = 42
+$$
