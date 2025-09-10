@@ -319,7 +319,7 @@ $$
 This is the **coupon collector’s formula**.
 
 
-## Problem 7: Consecutive 5's
+## Problem 8: Consecutive 5's
 
 ### Question:
 
