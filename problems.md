@@ -234,6 +234,91 @@ So out of 3 possible pairings, exactly 1 leads to intersection.
 
 $$P(\text{intersect}) = \frac{1}{3}$$
 
+## Problem 7: Seeing all 6 sides of Dice
+
+### Question:
+
+### Answer:
+
+## Expected Rolls Until All 6 Sides Appear (Coupon Collector)
+
+We want the expected number of rolls until all 6 sides of a fair die have appeared at least once.
+
+---
+
+### Step 1. Define states
+Let $E_k$ = expected number of rolls remaining given we have already seen $k$ distinct sides.  
+
+- $k = 0$: no sides seen yet  
+- $k = 6$: all sides seen (done)  
+
+$$\text{We want }E_0$$
+
+
+#### Step 2. Transition logic
+Suppose we’ve already seen $k$ distinct sides.
+
+- Probability of rolling a **new side** (progressing to $k+1$):  
+  $$
+  p = \frac{6-k}{6}
+  $$
+
+- Probability of rolling a **duplicate side** (staying at $k$):  
+  $$
+  1-p = \frac{k}{6}
+  $$
+
+Each roll costs 1. So the recurrence is:
+$$
+E_k = 1 + \frac{6-k}{6}E_{k+1} + \frac{k}{6}E_k
+$$
+
+#### Step 3. Rearrange
+Bring terms together:
+$$
+E_k - \frac{k}{6}E_k = 1 + \frac{6-k}{6}E_{k+1}
+$$
+
+$$
+\frac{6-k}{6}E_k = 1 + \frac{6-k}{6}E_{k+1}
+$$
+
+$$
+E_k = \frac{6}{6-k} + E_{k+1}
+$$
+
+#### Step 4. Telescoping sum
+We know $E_6 = 0$.  
+
+So:
+$$
+E_5 = \frac{6}{1} + 0 = 6
+$$
+$$
+E_4 = \frac{6}{2} + 6 = 9
+$$
+$$
+E_3 = \frac{6}{3} + 9 = 11
+$$
+$$
+E_2 = \frac{6}{4} + 11 = 12.5
+$$
+$$
+E_1 = \frac{6}{5} + 12.5 = 13.7
+$$
+$$
+E_0 = \frac{6}{6} + 13.7 = 14.7
+$$
+
+#### Step 5. General formula
+In general, for $n$ sides:
+$$
+E_0 = n \cdot \left(1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n}\right)
+$$
+
+This is the **coupon collector’s formula**.
+
+
 ## Problem 7: Consecutive 5's
 
 ### Question:
